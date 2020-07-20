@@ -1,0 +1,97 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #fefefa;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.widget-container {
+  width: 90vw;
+  max-width: 800px;
+  border: solid 1px slategray;
+  margin-top: 2rem;
+}
+
+.widget-title {
+  display: flex;
+  justify-content: center;
+  background-color: #e6ebf4;
+  padding: 1rem 2rem; 
+}
+
+.scores-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 2rem;
+}
+
+.student-score {
+  width: 90%;
+  border: solid 1px slategray;
+  border-radius: 45px;
+  display: grid;
+  z-index: 3;
+  margin: 1rem 0;
+}
+
+.student-score-total, 
+.student-score-details {
+  grid-area: 1 / 1;
+}
+
+.student-score-total {
+  height: 100%;
+  z-index: 1;
+  border-radius: 45px;
+}
+
+.student-score-total.lowest {
+  width: 42%;
+  background-color: #a9d3d2;
+}
+
+.student-score-total.lower {
+  width: 47%;
+  background-color: #b1c6a5;
+}
+
+.student-score-total.low {
+  width: 53%;
+  background-color: #e2efba;
+}
+
+.student-score-details {
+  z-index: 10;
+  padding: .5rem 2rem;
+}
+
+.score-percentiles {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+.info {
+  height: 1.75rem;
+  width: auto;
+  margin: .5rem 1rem;
+}
